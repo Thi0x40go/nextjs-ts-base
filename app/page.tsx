@@ -1,103 +1,169 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
+    <main>
+      <section>
+        <h2>Tipografia</h2>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Parágrafo simples com algum texto de exemplo.</p>
+        <p>
+          Outro parágrafo com um <strong>texto em negrito</strong>,{' '}
+          <em>itálico</em>, <u>sublinhado</u> e até um <a href="#">link</a>.
+        </p>
+        <blockquote>
+          Isso é uma citação. "Ser ou não ser, eis a questão."
+        </blockquote>
+        <small>Texto pequeno, geralmente usado para legendas.</small>
+      </section>
+
+      <section>
+        <h2>Listas</h2>
+        <h3>Lista não ordenada</h3>
+        <ul>
+          <li>Item A</li>
+          <li>Item B</li>
+          <li>Item C</li>
+        </ul>
+
+        <h3>Lista ordenada</h3>
+        <ol>
+          <li>Primeiro</li>
+          <li>Segundo</li>
+          <li>Terceiro</li>
         </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        <h3>Lista de descrição</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>Linguagem de marcação.</dd>
+          <dt>CSS</dt>
+          <dd>Folhas de estilo.</dd>
+          <dt>JavaScript</dt>
+          <dd>Linguagem de programação.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Formulários</h2>
+        <form>
+          <div>
+            <label>Texto</label>
+            <input type="text" placeholder="Digite aqui" />
+          </div>
+
+          <div>
+            <label>Email</label>
+            <input type="email" placeholder="email@exemplo.com" />
+          </div>
+
+          <div>
+            <label>Senha</label>
+            <input type="password" placeholder="********" />
+          </div>
+
+          <div>
+            <label>Seleção</label>
+            <select>
+              <option>Opção 1</option>
+              <option>Opção 2</option>
+              <option>Opção 3</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Textarea</label>
+            <textarea placeholder="Digite sua mensagem"></textarea>
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" /> Aceito os termos
+            </label>
+          </div>
+
+          <div>
+            <label>
+              <input type="radio" name="radio" /> Opção 1
+            </label>
+            <label>
+              <input type="radio" name="radio" /> Opção 2
+            </label>
+          </div>
+
+          <div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetar</button>
+            <button type="button">Apenas Botão</button>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>Tabelas</h2>
+        <table border={1}>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Profissão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana</td>
+              <td>28</td>
+              <td>Designer</td>
+            </tr>
+            <tr>
+              <td>Bruno</td>
+              <td>34</td>
+              <td>Desenvolvedor</td>
+            </tr>
+            <tr>
+              <td>Carla</td>
+              <td>25</td>
+              <td>Marketing</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Imagens</h2>
+        <img src="https://via.placeholder.com/150" alt="Placeholder" />
+      </section>
+
+      <section>
+        <h2>Código</h2>
+        <p>
+          Aqui vai um código embutido: <code>console.log('Hello World')</code>
+        </p>
+        <pre>
+{`function ola() {
+  console.log('Olá mundo')
+}`}
+        </pre>
+      </section>
+
+      <section>
+        <h2>Outros Elementos</h2>
+        <details>
+          <summary>Mais informações</summary>
+          <p>Esse texto aparece ao abrir o details.</p>
+        </details>
+
+        <p>Barra de progresso:</p>
+        <progress value="70" max="100">70%</progress>
+
+        <p>Medidor:</p>
+        <meter value="0.6">60%</meter>
+
+        <hr />
+      </section>
+    </main>
+  )
 }
