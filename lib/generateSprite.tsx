@@ -2,9 +2,6 @@ import path from 'path';
 import fs from 'fs';
 import SVGSpriter from 'svg-sprite';
 
-/**
- * Gera o sprite SVG a partir dos arquivos em ./assets/icons
- */
 const generateSprite = () => {
   const spriter = new SVGSpriter({
     dest: './public',
@@ -43,9 +40,4 @@ const generateSprite = () => {
   });
 };
 
-export default generateSprite;
-
-// Executa diretamente se chamado via ts-node
-if (require.main === module) {
-  generateSprite();
-}
+export generateSprite

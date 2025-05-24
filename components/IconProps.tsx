@@ -1,14 +1,38 @@
+import React from "react";
+
 type IconProps = {
   name: string;
-  width?: number;
-  height?: number;
+  title?: string;
+  color?: string;
+  size?: number | string;
   className?: string;
+  decorative: true;
+  style?: React.CSSProperties;
 };
 
-export default function Icon({ name, width = 24, height = 24, className }: IconProps) {
+export default function Icon({
+  name,
+  size = `1.3em`,
+  color = "currentColor",
+  className,
+  title,
+  decorative = true,
+  style,
+}: IconProps) {
+  const ariaProps = decorative
+    ? { "aria-hidden": true }
+    : { role: "img", "aria-label": title || name };
+
   return (
-    <svg width={width} height={height} className={className} aria-hidden="true">
-      <use href={`#${name}`} />
+    <svg 
+      {...ariaProps}
+      width={size} 
+      height={size} 
+      className={className} 
+      style={{ fill: color, ...style }}
+    >
+      {title && !decorative && <title>{title}</title>}
+      <use xlinkHref={`#${name}`} />
     </svg>
   );
 }
