@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "sprite": "node lib/generateSprite.js",
     "start": "next start",
     "lint": "next lint"
   },
